@@ -16,7 +16,7 @@ You will need postgres nod to start application
 
 `$ go run .`
 
-###Configuration
+### Configuration
 
 Use `.env` file to configure various environment variables 
 
