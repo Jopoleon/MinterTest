@@ -118,13 +118,6 @@ func (s *Storage) ValueByAddressAndPeriod(address string, from, to time.Time) (f
 		}
 		pp.Println(total)
 		return total, err
-
-		//bignum, ok := new(big.Int).SetString(string(total), 10)
-		//if !ok {
-		//	s.logger.Errorf("cant parse int: ", string(total))
-		//	return "0", nil
-		//}
-		//return bignum.String(), err
 	}
 
 }

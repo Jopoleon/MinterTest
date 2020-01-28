@@ -123,8 +123,6 @@ func (a *MyAPI) TxTotalValueByPeriod(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-
-	pp.Println(fD, tD)
 	if fromDate != "" && toDate != "" {
 		if !fD.Before(tD) {
 			w.WriteHeader(http.StatusBadRequest)

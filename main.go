@@ -9,7 +9,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-const MaxHeight = 1000
+const MaxHeight = 250
 
 func main() {
 	logrus.Info("started ")
@@ -22,7 +22,8 @@ func main() {
 		logger.Fatalf("Error getting .env, %v", err)
 	}
 
-	rp, err := NewRepository(os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_NAME"), os.Getenv("DB_HOST"), os.Getenv("DB_PORT"), logger)
+	rp, err := NewRepository(os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"),
+		os.Getenv("DB_NAME"), os.Getenv("DB_HOST"), os.Getenv("DB_PORT"), logger)
 	if err != nil {
 		logger.Fatal(err)
 	}
