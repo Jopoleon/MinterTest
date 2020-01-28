@@ -1,0 +1,30 @@
+version: '3'
+services:
+  app:
+    container_name: app
+    build: .
+    ports:
+      - 8080:8080
+    restart: on-failure
+    volumes:
+      - .:/usr/src/app/
+    depends_on:
+      - dbpostgres
+    networks:
+      - minter
+
+  dbpostgres:
+    image: postgres
+    volumes:
+      - ./database_postgres:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    networks:
+      - minter
+networks:
+  minter:
+    driver: bridge

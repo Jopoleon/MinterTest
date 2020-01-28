@@ -1,0 +1,78 @@
+Необходимо разработать систему парсинга транзакций в блокчейн Minter с сохранением в
+БД и возможностью получения данных по транзакциям из базы данных через API
+Сами транзакции получать тут:https://api.minter.stakeholder.space/block?height=7 Где height
+высота блока от 1 до 1000000
+Блок может не содержать транзакций
+Сохранять необходимо транзакции с типом 1 и 3 (пример ответа опубликован ниже, а так
+же доступен по ссылке выше)
+Результатом выполнения задания должен быть сервис в котором по АПИ можно получить:
+транзакции за период,
+транзакции по адресу,
+Сумма переводов по адресу (транзакции с типом 1) за период
+Например запрос на http://localhost:8080/api/transactions/from/Mx76add9b3f868497c42932ff0f45f709404795b4a
+Должен вернуть все транзакции отправитель которых
+Mx76add9b3f868497c42932ff0f45f709404795b4a
+Пример ответа от ноды с данными транзакций:
+{
+"jsonrpc": "2.0",
+"id": "",
+"result": {
+"hash": "c2e9e3d0e3c0f86136d632c0f2670b76c6e3ff9510f6b3e5a91baa99a624d7ef",
+"height": "4267868",
+"time": "2020-01-22T14:48:59.077842521Z",
+"num_txs": "1",
+"total_txs": "4686587",
+"transactions": [
+{
+"hash": "Mtcf6476965bf23e6aed20f9aef736189f7558a12585d02c0bdda85188e99f8dfe",
+"raw_tx":
+"f88882047b01018a4249500000000000000001aceb8a4249500000000000000094888729b493106dcf643f19ea9ba934d
+c9777449e8a059c91607cfb8b900000808001b845f8431ba0b289ed407761dacc04b5d7945772bf4b50d145ffd1965deaba
+b386fd2f81a179a00965fa748750c12c47be08e49aeaf85256861fb03760a07cc1f156fd7f6b9cc5",
+"from": "Mx7a77cd2baf195c2e33194ef9f2ca7295452e1777",
+"nonce": "1147",
+"gas_price": 1,
+"type": 1,
+"data": {
+"coin": "BIP",
+"to": "Mx888729b493106dcf643f19ea9ba934dc9777449e",
+"value": "26500000000000000000000"
+},
+"payload": "",
+"service_data": "",
+"gas": "10",
+"gas_coin": "BIP",
+"tags": {
+"tx.type": "01",
+"tx.from": "7a77cd2baf195c2e33194ef9f2ca7295452e1777",
+"tx.to": "888729b493106dcf643f19ea9ba934dc9777449e",
+"tx.coin": "BIP"
+}
+}
+],
+"block_reward": "312000000000000000000",
+"size": "9984",
+"proposer": "Mpfe176f944623a8ca9f409a62f0ea3ca75c1cf8d89970adf9384fc9ae8d77fa0b",
+"validators": [
+{
+"pub_key": "Mp4c45b862300e0d6a05febb742caa0448aef0e80c53d341bb10236b039ac54c1a",
+"signed": true
+},
+{
+"pub_key": "Mp88883bcd4e9a4eeb7f5a7b7d1f4c02ac0fadc268824694fcccc84e39f4e08888",
+"signed": true
+},
+{
+"pub_key": "Mp02ff680cbea3fb95f547bddde69c9150b3b7ab8d1c5c2a1bf94ccb70bf073b2c",
+"signed": true
+},
+{
+"pub_key": "Mp65758496f8a5d626cac77f5a38894beae0050fdef862da201964cd2fd8111111",
+"signed": true
+},
+{
+"pub_key": "Mp7979c5a8d974e0c8c99f568b91454853f0c48fbbe68ac39d40efd0b330f30885",
+"signed": true
+},
+]
+}}

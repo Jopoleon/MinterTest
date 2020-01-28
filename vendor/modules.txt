@@ -1,0 +1,24 @@
+# github.com/go-chi/chi v4.0.3+incompatible
+github.com/go-chi/chi
+# github.com/go-chi/cors v1.0.0
+github.com/go-chi/cors
+# github.com/jmoiron/sqlx v1.2.0
+github.com/jmoiron/sqlx
+github.com/jmoiron/sqlx/reflectx
+# github.com/konsorten/go-windows-terminal-sequences v1.0.2
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/lib/pq v1.3.0
+github.com/lib/pq
+github.com/lib/pq/oid
+github.com/lib/pq/scram
+# github.com/mailru/easyjson v0.7.0
+github.com/mailru/easyjson
+github.com/mailru/easyjson/buffer
+github.com/mailru/easyjson/jlexer
+github.com/mailru/easyjson/jwriter
+# github.com/pkg/errors v0.9.1
+github.com/pkg/errors
+# github.com/sirupsen/logrus v1.4.2
+github.com/sirupsen/logrus
+# golang.org/x/sys v0.0.0-20200124204421-9fbb57f87de9
+golang.org/x/sys/unix
